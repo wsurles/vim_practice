@@ -1,0 +1,118 @@
+This file contains vim commands that I am copying from online as well as my thoughts on the commands and how I think of vim in general. Its really just a scratch pad for real practice. 
+
+Things you should know when reading this:
+
+	- WORDS contain puntuation and symbols
+	- words do not
+
+Things you should know about VIM:
+
+	- Yes you can use the arrow keys. They are on every keyboard. Use em.
+	- Moving up and down will put you in the nearest spot that it can to your original horizontal position
+	- There are lots of shortcuts for moving around but they don't work in insert mode. Only normal mode
+	- It will take a while to get used to all the key combos you can use to do similar things. I think VIM takes a lot of getting used to and requires way more thinking than a nomral text editor. At least at first. 
+	- Pretty much every movement or edit is a command
+	- There are some basic ones that you will get used to. It really does not take that much to get started. I mean you could just go into insert mode and use the arrow keys to get around. It takes a little longer than using the shortcuts but you can still get the job done. 
+
+There are modes in vim.
+	
+	- normal 
+		- this is where you move around
+		- hit esc enough times and you will get back her
+	- insert
+		- this is where you add text
+		- I'm writing this right now in insert mode
+	- replace
+		- like insert but more for cleaning up or changing things
+
+Cursor movement
+	- h	- move cursor left
+	- l 	- move cursor right
+	- j 	- move cursor down
+	- k	- move cursor up
+		- these are the same as gmail which I am used to
+
+	- w 	- jump forwards to the start of a word
+	- W 	- jump forwards to the start of a WORD
+	- e 	- jump forwards to the end of a word
+	- E 	- jump forwards to the end of a WORD
+	- b 	- jump backwards to the start of a word
+	- B 	- jump backwards to the start of a WORD
+
+	- 0		- jump to the start of a line
+	- ^		- jump to the first non-blank character of a line
+	- $		- jump to the end of a line
+
+	- gg	- go to the first line of the document
+	- G		- go to the first line of the document
+	- 5G	- go to line 5 of the document
+	
+	- fx 	- jump forward to next occurence of character x
+	- tx	- jump forward adjacent to next occurence of character x
+	- Fx	- jump backward to previous occurence of character x
+	- Tx	- jump backward adjacent to previous occurence of character x
+
+	- )	- jump to next sentence
+	- (	- jump to previous sentence
+	- }	- jump to next paragraph (or function/block when editing code)
+	- {	- jump to previous paragraph (or function/block when editing code)
+
+	- [{	- jump to the open { in code
+	- ]}	- jump to the close } in code
+  - ^E  - scroll the window down
+  - ^Y  - scroll the window up
+  - ^F  - scroll down one page
+  - ^B  - scroll up one page
+  - H   - move cursor to the top of the window
+  - M   - move cursor to the middle of the window
+  - L   - move cursor to the bottom of the window
+
+	Tip: 	Prefix a cursor movement command with a number to repeat it that many times.
+		For example, 4j moves down 4 lines.
+	use this to practice:
+		var map;
+		function initMap() {
+  		  map = new google.maps.Map(document.getElementById('map'), {
+    		    center: {lat: -34.397, lng: 150.644},
+    		    zoom: 8
+  		});
+}
+Insert mode - inserting/appending text
+  - i - insert before the cursor
+  - I - insert at the Beginning of the line
+  - a - insert (append) after the cursor
+
+Exiting
+
+Cut and paste
+
+Editing
+
+	- r	- replace a single character
+	- J 	- join line below to the current one
+	- cc 	- change (replace) entire line
+	- cw	- change (replace) to the end of the word
+	- c$	- change (replace to the end of the line
+	- s 	- delete character and substitute text
+	- S	- delete line and substitie text (same as cc)
+	- xp 	- transpose tow lettes (delete and paste)
+	- u 	- undo
+	- Ctrl + r	- redo
+	- . 	- repeat last command
+
+Marking text
+
+	- v	- stat visual mode, mark lines, then do a command (like y-yank)
+	- V 	- start linewise visual mode
+	- Ctrl + v	- start visual block mode
+	- <ESC>	- exit visual mode
+
+	- aw 	- mark a word
+	- ab	- a block with ()
+	- aB	- a block with {}
+	- ib	- inner block with ()
+	- iB	- inner block with {}
+
+	- o	- move to other end of marked area
+	- O	- move to other corner of block
+
